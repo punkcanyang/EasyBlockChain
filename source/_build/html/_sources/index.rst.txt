@@ -22,6 +22,8 @@ TEST
 =====
 
 
+:ref:`帳房先生`
+
 :ref:`label-name`
 
 
