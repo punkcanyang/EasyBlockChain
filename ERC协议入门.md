@@ -1,0 +1,170 @@
+# ERC协议入门
+
+ERC是Ethereum Request for Comment的缩写， 是**Ethereum**的应用程序标准或约定，也就是说他必须是 EIP 中针对以太坊的标准或约定要进行开发的共识。
+
+ERC分成 Final(定案) / Last Call(预备定案) / Review(审查中) / Draft(草稿) / Stagnant(没进度) / Withdrawn(废弃) 五种阶段
+
+Final会被列入普遍标准，像我们所熟知的ERC721，ERC20等等，都是Final，我们本篇只简述Final的ERC
+
+[本文持续在Github更新](https://github.com/punkcanyang/EasyBlockChain)
+
+
+- ERC20    
+  - Token Standard 代币标准
+  - 特征：最早规划出来的代币系统，包括现在的USDT都是属于ERC20的代币，也是EVM上最基础的应用，创造了ICO时代
+- ERC55    
+  - Mixed-case checksum address encoding 混合大小写校验和地址编码
+  - 特征：检查合约输入的地址是否符合标准，好处是被处理过的钱包地址，可以验证是否为正确格式，避免转错了
+- ERC137    
+  - Ethereum Domain Name Service - Specification以太坊域名服务
+  - 特征：ENS的规范
+- ERC162    
+  - Initial ENS Hash Registrar 
+  - 特征：让ENS可升级，可续约，可拍卖等等，并增加一些延伸的功能
+- ERC165    
+  - Standard Interface Detection 标准接口检测    
+  - 特征：随着ERC种类可预期的增加，为了长期的发展，智能合约的接口就需要标准化，也就是今天是ERC20出去的，透过ERC165的规范，接收方（可能是钱包可能是合约）能够确定对方是ERC20，并采用对应的接收方式。
+- ERC173    
+  - Contract Ownership Standard 合同所有权标准    
+  - 特征：智能合约所有权的规范标准，从此智能合约可以转移所有权，而不限于在布署者的钱包上
+- ERC181    
+  - ENS support for reverse resolution of Ethereum addresses ENS 支持反向解析以太坊地址
+  - 特征：反向解析的意思，让智能合约可以透过钱包地址查询到ENS
+- ERC190    
+  - Ethereum Smart Contract Packaging Standard 以太坊智能合约打包标准
+  - 特征：严格说来这并不是在智能合约里的标准，而是定义一套开发智能合约时的常用标准，会用在开发套件上，对开发人员比较有意义，一般用户听过就好
+- ERC191    
+  - Signed Data Standard 签名数据标准    
+  - 特征：规范如何透过钱包签名的标准，假设签名设计不符合ERC191的设计，Metamask就会跳出警示
+- ERC600    
+  - Ethereum purpose allocation for Deterministic Wallets 确定性钱包的以太坊用途分配
+  - 特征：一种密码规则，它要求所有使用以太坊的数字钱包必须按照特定的方式创建账户。就像你创建电子邮件账户时需要遵循一些规则一样，数字钱包也需要按照 EIP-600 规定的标准化方式来创建以太坊账户。这样，不同的数字钱包就可以相互兼容，使用者也可以更加方便地管理自己的数字资产。
+- ERC601    
+  - Ethereum hierarchy for deterministic wallets 确定性钱包的以太坊层次结构
+  - 特征：同样也是关于钱包地址的密码规则，粗略上来说就是一个助记词多钱包地址的规则
+- ERC681    
+  - URL Format for Transaction Requests 交易请求的 URL 格式
+  - 特征：简单来说就是类似支付宝发出收款请求的链接
+- ERC721    
+  - Non-Fungible Token Standard 不可替代的令牌标准    
+  - 特征：最早的NFT协议，一个Token ID只能有一个代币，也就是说用这个方式发行的NFT，每个ID都只会有一个。
+- ERC777    
+  - Token Standard 代币标准   
+  - 特征：ERC20的扩充，例如接收后要发生什么事，或是黑名单的功能等等。
+- ERC820 跟 ERC1820
+  - Pseudo-introspection Registry Contract 伪自省注册表合约
+  - 特征：这两个功能基本上是一样的，1820修补了820的一些问题，定义了一个通用注册表合约，任何地址（合约或普通用户帐户）都可以注册它支持的接口以及哪个智能合约负责接口实现，可以视为是ERC165的扩充
+- ERC1155    
+  - Multi Token Standard 多令牌标准    
+  - 特征：NFT市场的另一个主要协议，跟ERC721不同的是，ERC1155可以每个Token ID有多个Token，也就是说每一个编号可以有多个NFT，这适用于类似游戏等设计，也可以用于一个艺术品有多个复本。
+- ERC1167	
+  - Minimal Proxy Contract 最小代理合约
+  - 特征：可以用最节省的方式复制一个另一个合约的功能
+- ERC1271    
+  - Standard Signature Validation Method for Contracts 合约的标准签名验证方法
+  - 特征：虽然也是一种签名规范，但是1271可以让合约提供签名
+- ERC1363    
+  - Payable Token 应付代币    
+  - 特征：ERC20的一种衍生，减少一些交易调用的次数
+- ERC1967    
+  - Proxy Storage Slots 代理存储槽
+  - 特征：定义了代理合约时，调用储存数据的管理逻辑。
+- **ERC2309**    
+  - ERC-721 Consecutive Transfer ExtensionERC-721连续传输扩展
+  - 特征：这是一个很有趣的协定，可以批量转账创建销毁ERC721格式的NFT
+- ERC2535    
+  - Diamonds, Multi-Facet Proxy 多面代理  
+  - 特征：这玩意稍微复杂了点，可以创建可升级，且由多个合约组成的代理合约，如果你单一合约太大，也可以拆成多个合约，然后用ERC2535组合起来
+- ERC2612    
+  - Permit Extension for EIP-20 Signed Approvals EIP-20 签署批准的许可延期
+  - 特征：让ERC20可以采用allowance的做法来获得批准，allowance原本是ERC721的中的批准方法
+- ERC2678    
+  - Revised Ethereum Smart Contract Packaging Standard (EthPM v3) 修订后的以太坊智能合约打包标准 (EthPM v3)
+  - 特征：开发智能合约的新版打包标准，对开发人员比较有意义，一般用户用不到
+- ERC2771    
+  - Secure Protocol for Native Meta Transactions 原生元交易的安全协议
+  - 特征：这个也是很有意思，一般来说交易需要交易者支付Gas，不过ERC2771 的出现，用户可以透过第三方中继支付Gas，也就是说可以很多人交付给中继平台来执行交易，Gas统一由中继平台支付，用户不用自己付，而且批量支付可以降低总Gas，对于项目来说可以提高用户体验。
+- ERC2981    
+  - NFT Royalty Standard NFT 版税标准    
+  - 特征：定义了NFT的共通性版税设定，不过这功能大部分的NFT市场都还没支援。
+- ERC3156    
+  - Flash Loans 闪电贷    
+  - 特征：定义了闪电贷的接口
+- ERC3448    
+  - MetaProxy Standard 元代理标准   
+  - 特征：这也是一个很有意思的设计，MetaProxy是一种可以整合多个合约交互的代理合约，可以很方便将复杂的应用结合在一个合约授权中
+- ERC3475    
+  - Abstract Storage Bonds 抽象存储债券  
+  - 特征：**TBC**
+- ERC3525    
+  - Semi-Fungible Token 半同质代币   
+  - 特征：基于ERC721，但可以将NFT碎片化的一种机制，跟ERC1155有点类似，但是不同的是，他是把ERC721的每一个代币再增加一个SLOT来记录数量，这个数量可以是占比，但都指向同一个NFT Token，这对于金融产品有很多可能的应用
+- ERC3668    
+  - CCIP Read: Secure offchain data retrieval CCIP 阅读：安全链下数据检索
+  - 特征：**TBC**
+- ERC4400    
+  - EIP-721 Consumable Extension EIP-721 耗材扩展  
+  - 特征：**TBC**
+- ERC4519    
+  - Non-Fungible Tokens Tied to Physical Assets 与实物资产绑定的不可替代代币
+  - 特征：**TBC**
+- ERC4626    
+  - Tokenized Vaults 代币化保险库   
+  - 特征：**TBC**
+- ERC4804    
+  - Web3 URL to EVM Call Message Translation EVM 调用消息翻译的 Web3 URL
+  - 特征：**TBC**
+- ERC4834    
+  - Hierarchical Domains 分层域  
+  - 特征：**TBC**
+- ERC4906    
+  - EIP-721 Metadata Update ExtensionEIP-721 元数据更新扩展
+  - 特征：**TBC**
+- ERC4907    
+  - Rental NFT, an Extension of EIP-721 出租 NFT，EIP-721 的扩展
+  - 特征：
+- ERC4955    
+  - Vendor Metadata Extension for NFTsNFT 的供应商元数据扩展
+  - 特征：**TBC**
+- ERC5023    
+  - Shareable Non-Fungible Token 可共享的不可替代令牌 
+  - 特征：**TBC**
+- ERC5192   
+  - Minimal Soulbound NFTs 最小的 Soulbound NFT  
+  - 特征：灵魂绑定NFT协议的规范
+- ERC5267    
+  - Retrieval of EIP-712 domain 检索 EIP-712 域   
+  - 特征：**TBC**
+- ERC5313    
+  - Light Contract Ownership 轻合同所有权  
+  - 特征：**TBC**
+- ERC5375    
+  - NFT Author Information and Consent NFT 作者信息和同意
+  - 特征：**TBC**
+- ERC5484    
+  - Consensual Soulbound Tokens 双方同意的灵魂绑定令牌  
+  - 特征：**TBC**
+- ERC5489    
+  - NFT Hyperlink Extension NFT 超链接扩展 
+  - 特征：**TBC**
+- ERC5528    
+  - Refundable Fungible Token 可退款的可替代代币   
+  - 特征：**TBC**
+- ERC5646    
+  - Token State Fingerprint 令牌状态指纹    
+  - 特征：**TBC**
+- ERC5679   
+  - Token Minting and Burning 令牌铸造和燃烧  
+  - 特征：**TBC**
+- ERC5732    
+  - Commit Interface 提交界面 
+  - 特征：**TBC**
+- ERC5750    
+  - General Extensibility for Method Behaviors方法行为的一般可扩展性
+  - 特征：**TBC**
+- ERC6147    
+  - Guard of NFT/SBT, an Extension of ERC-721NFT/SBT的守卫，ERC-721的延伸
+  - 特征：**TBC**
+- ERC6150    
+  - Hierarchical NFTs 分层 NFT    
+  - 特征：**TBC**
