@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "4001fb8f3f422618",
+    "type": "split",
+    "children": [
+      {
+        "id": "d74330f1ed95b291",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "85e15dd2c496b04b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "区块链大年表.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "603bc5748d39a26d",
+    "type": "split",
+    "children": [
+      {
+        "id": "cee9b72e905558ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9d733c790be9847",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "669cb85d89dab206",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4941d9ccb1b100b0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "666611602c8fd45f",
+    "type": "split",
+    "children": [
+      {
+        "id": "51f92c17163d9c55",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f21a39409b7f940b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "区块链大年表.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f8b4bb9c06270c21",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "区块链大年表.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4152873ced69e4dc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d2cd682ec9ffbbf1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "区块链大年表.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "85e15dd2c496b04b",
+  "lastOpenFiles": [
+    "Readme.md",
+    "区块链大年表.md",
+    "Web3小白书.md",
+    "区块链黑话.md",
+    "区块链基础概念.md"
+  ]
+}
